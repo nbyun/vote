@@ -1,0 +1,2 @@
+:player_picture_url: "/player_picture/:id/:style/:basename.:extension"
+:player_picture_path: ":rails_root/public/player_picture/:id/:style/:basename.:extension"

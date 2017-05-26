@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Install B 登录</title>
+  <%= stylesheet_link_tag 'admin/application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'admin/application', 'data-turbolinks-track' => true  %>
+  <%= csrf_meta_tags %>
+  <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+  <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+  <![endif]-->
+
+</head>
+
+<body>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-4 col-md-offset-4">
+      <div class="login-panel panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title">请输入争霸赛管理员账号</h3>
+        </div>
+        <div id="message">
+          <%= render 'admin/common/messages' %>
+        </div>
+        <div class="panel-body">
+          <%= form_for(:admin, url: admin_session_path) do |f| %>
+            <fieldset>
+              <div class="form-group">
+                <%= f.text_field :email, style: 'ime-mode:disabled;', class: 'form-control', placeholder: '邮箱', autocomplete: 'off'%>
+              </div>
+              <div class="form-group">
+                <%= f.password_field :password, style: 'ime-mode:disabled;', class: 'form-control', placeholder: '密码', autocomplete: 'off'%>
+              </div>
+             <!-- <div class="checkbox">
+                <label>
+                  <input name="remember" type="checkbox" value="Remember Me">Remember Me
+                </label>
+              </div>-->
+              <!-- Change this to a button or input when using this as a form -->
+              <input type="submit" value="登录" class="btn btn-lg btn-success btn-block">
+            </fieldset>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+
+</html>

@@ -1,0 +1,18 @@
+<div class="form-group">
+  <label>姓名</label>
+  <%= f.text_field :name, class: 'form-control' %>
+</div>
+<div class="form-group">
+  <label>人送外号</label>
+  <%= f.text_field :nickname, class: 'form-control' %>
+</div>
+<div class="form-group">
+  <label>自拍照</label>
+  <%= f.file_field :player_picture %>
+</div>
+<div class="form-group">
+  <label>简介</label>
+  <%= f.text_area :description, class: 'form-control', rows: 3 %>
+</div>
+
+<button type="submit" class="btn btn-primary btn-lg" style="width: 200px">提交</button>

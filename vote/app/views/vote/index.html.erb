@@ -1,0 +1,110 @@
+<div class="navbar navbar-default navbar-fixed-top scroll-me" >
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">
+        <%= image_tag 'logo.png' %>
+      </a>
+    </div>
+    <div class="navbar-collapse collapse">
+      <ul class="nav navbar-nav navbar-right " style="padding:20px;">
+        <li><a href="#home-sec">比赛介绍</a></li>
+        <li><a href="#about-sec">参赛选手</a></li>
+        <li><a href="#description-sec">活动奖励</a></li>
+        <li><a href="#contact-sec">联系建议</a></li>
+      </ul>
+    </div>
+
+  </div>
+</div>
+<!-- NAVBAR END  -->
+
+<div id="home-sec">
+  <div class="overlay">
+    <div class="container">
+      <div class="col-md-8 col-md-offset-2 text-center scroll-me" >
+
+        <h1 style="padding-top:120px;">
+          <strong>你心目中的<mark>比王 </mark>是谁呢，快来给他投票吧！</strong>
+        </h1>
+        <p class="home-p">
+          WCG比王争霸赛是众多比王的选举比赛，类似美国的投票选总统，自由明主是争霸赛的核心点，因此争霸赛历经5年也经久不衰，前前后后的吹比崽也不负众望，吹得比深入人心、沁人心脾，吹比崽们嘴上没说，但是心里一直有个支配他的比王，为了走进吹比崽的内心，争霸赛一直延续至今。
+        </p>
+        <br />
+        <a href="#about-sec" class="btn btn-info btn-lg"> 前往投票 </a>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+<!--HOME SECTION END  -->
+<section id="about-sec" >
+  <div class="container">
+
+    <div class="row text-center">
+      <% @players.each do |player| %>
+          <div class="col-md-4">
+            <%= image_tag player.try(:player_picture).image.url(:thumb), class: "img-circle" %>
+            <br />
+            <h3><%= player.name %>(<%= player.nickname %>)</h3>
+            <p>
+              <%= player.description %>
+            </p>
+            <p>
+              <%= link_to(vote_vote_path(player), remote: true, id: "#{player.id}_vote", method: :post, data: { confirm: '确定投给这个比崽？' }, class: 'button button-3d button-action button-circle button-jumbo') do %>
+                  <i class="fa fa-thumbs-up"></i>
+              <% end %>
+            </p>
+          </div>
+      <% end %>
+    </div>
+  </div>
+  <!-- CONTAINER END  -->
+</section>
+<!--ABOUT SECTION END  -->
+<section id="description-sec">
+  <div class="container">
+    <div class="row text-center">
+      <div class="col-md-8 col-md-offset-2">
+        <h3>活动奖励</h3>
+        <p >
+          凡是参与比王争霸赛的选手可获得加薪宝典一本，本比赛的冠军奖杯将由银河系mt109号-宇宙左使打造颁发，参与投票的比崽可以获得价值100元的金坷垃一袋。
+        </p>
+      </div>
+
+    </div>
+    <!-- ROW END  -->
+  </div>
+  <!-- CONTAINER END  -->
+</section>
+<!--DESCRIPTION SECTION END  -->
+<section id="contact-sec">
+  <div class="container">
+    <div class="row text-center">
+      <div class="col-md-8 col-md-offset-2">
+        <h3>联系建议 </h3>
+        <br />
+        <div class="form-group">
+          <strong>地址:</strong>  第2个枕头边上, 5万平米的床 , 北纬108°东经129°, γ星球.
+          <br /><br />
+          <label></label>
+          <input type="text" class="form-control" placeholder="输入你的名字" />
+          <label></label>
+          <input type="text" class="form-control" placeholder="输入你的联系邮箱" />
+          <label></label>
+          <textarea class="form-control" placeholder="宝贵建议" rows="5"></textarea>
+          <br />
+          <a href="#" class="btn btn-primary">发送建议</a>
+        </div>
+        <div class="footer">
+          &copy; 2017 bking.com | 更多详情请咨询 - <a href="http://www.baidu.com/" target="_blank" title="装逼崽的必备搜索引擎">b王搜索</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

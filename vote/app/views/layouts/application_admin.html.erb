@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title><%= get_admin_title %></title>
+  <%= csrf_meta_tags %>
+
+  <%= stylesheet_link_tag  'admin/application', media: 'all', 'data-turbolinks-track'=> 'reload' %>
+  <%= javascript_include_tag 'admin/application', 'data-turbolinks-track'=> 'reload' %>
+</head>
+
+<body>
+<div id="wrapper">
+  <%= render 'admin/common/before' %>
+  <div id="message">
+    <%= render 'admin/common/messages' %>
+  </div>
+  <div id="page-wrapper">
+    <%= yield %>
+  </div>
+</div>
+</body>
+</html>
