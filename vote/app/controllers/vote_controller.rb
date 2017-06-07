@@ -10,7 +10,7 @@ class VoteController < ApplicationController
     @vote_flag = false
     if @player.present?
       ip_address = request.remote_ip
-      host_name = Resolv.getname(request.remote_ip)
+      #host_name = Resolv.getname(request.remote_ip)
       have_ticket_today = Ticket.where(ip_address: ip_address).where('created_at >= ?', Date.today).first
       if have_ticket_today.present?
         @msg = '投票也要按照基本法，一天只能投一次好么！'
