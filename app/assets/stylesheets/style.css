@@ -168,7 +168,7 @@ ul, li {
     text-overflow: ellipsis;
     white-space: nowrap;
 }
-.template p {
+.template .pv {
     font-size: 12px;
     color: #a3afb7;
     float: right;
