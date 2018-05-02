@@ -16,7 +16,7 @@ class VoteController < ApplicationController
         @msg = '投票也要按照基本法，一天只能投一次好么！'
         return
       else
-        ticket = @player.tickets.build(ip_address: ip_address, host_name: host_name)
+        ticket = @player.tickets.build(ip_address: ip_address)
         if ticket.save
           @msg = '投票成功！相信你喜欢的比王会登顶第一！'
           @vote_flag = true
