@@ -144,6 +144,21 @@ ul, li {
     -moz-transition: all .2s linear;
     transition: all .2s linear;
 }
+.template .imgbtn {
+    display: block;
+    width: 240px;
+    height: 240px;
+    overflow: hidden;
+    transition: height .1s linear;
+    position: relative;
+}
+.template .imgbtn img {
+    width: 240px;
+    height: 240px;
+}
+.template .temcon {
+    margin-top: 30px;
+}
 
 
      

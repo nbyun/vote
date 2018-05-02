@@ -49,11 +49,12 @@
     <div class="row text-center">
       <ul class="goods_ul">
         <% @players.each do |player| %>
-          <li class="template">
-            <div class="col-md-4">
+          <li class="template"> 
+            <a class="imgbtn">
               <%= image_tag player.try(:player_picture).image.url(:thumb), class: "img-circle" %>
-              <br />
-              <h3><%= player.name %>(<%= player.nickname %>)</h3>
+            </a>
+            <div class="temcon">
+              <h4><%= player.name %>(<%= player.nickname %>)</h4>
               <p>
                 <%= player.description %>
               </p>
@@ -62,7 +63,7 @@
                     <i class="fa fa-thumbs-up"></i>
                 <% end %>
               </p>
-            </div>
+            </div>   
           </li>
         <% end %>
       </ul> 
