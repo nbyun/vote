@@ -126,7 +126,7 @@ ul, li {
     cursor: pointer;
     width: 280px;
     float: left;
-    height: 400px;
+    height: 500px;
     margin-right: 26px;
     padding: 20px;
     box-sizing: border-box;
@@ -159,6 +159,19 @@ ul, li {
 .template .temcon {
     margin-top: 30px;
 }
-
+.template h4 {
+    color: #37474f;
+    font-size: 14px;
+    width: 200px;
+    height: 19px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.template p {
+    font-size: 12px;
+    color: #a3afb7;
+    float: right;
+}
 
      
