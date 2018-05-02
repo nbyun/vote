@@ -52,7 +52,7 @@ class Admin::PlayersController < Admin::AdminBaseController
       render :edit
       return
     end
-    Maker.transaction do
+    Player.transaction do
       begin
         @player.save!
         save_or_update_image do
