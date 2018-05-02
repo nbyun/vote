@@ -167,11 +167,11 @@ ul, li {
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+    font-weight: bold;
 }
 .template .pv {
     font-size: 12px;
     color: #a3afb7;
-    float: right;
 }
 
      
