@@ -1,4 +1,4 @@
-source 'http://gems.ruby-china.org'
+source 'http://gems.ruby-china.com'
 
 git_source(:github) do |repo_name|
   repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?("/")
@@ -55,3 +55,9 @@ gem 'font-awesome-sass'
 gem "paranoia", github: 'rubysherpas/paranoia', branch: 'rails5'
 gem 'config'
 gem 'coffee-script-source', '1.8.0', :group => :development
+gem 'sunspot_rails'
+gem 'sunspot_solr'
+gem 'progress_bar'
+gem 'sidekiq'
+gem 'redis', '3.3.5'
+gem 'hiredis'

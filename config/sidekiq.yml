@@ -1,0 +1,13 @@
+---
+development:
+  :concurrency: 5 #并发数量，最好不高于50，默认情况下，一个sidekiq进程创建10个线程，因为ActiveRecord有一个连接池，需要正确配置database.yml，将pool数量设置为接近或等于线程数
+test:
+  :concurrency: 10
+production:
+  :concurrency: 20
+:pidfile: tmp/sidekiq.pid
+:logfile: tmp/sidekiq.log
+:queues:
+  - critical
+  - default
+  - low
