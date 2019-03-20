@@ -1,6 +1,6 @@
 class Avatar
   include Mongoid::Document
-  plugin Plug
+  include Plug
   store_in collection: 'images', database: 'vote'
   
   field :nm, type: String
