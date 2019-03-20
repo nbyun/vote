@@ -1,4 +1,12 @@
 GIT
+  remote: https://github.com/nbyun/mongoid_gridfs_plug.git
+  revision: 5501d439df5f4f1bb17a9f6d56ee6ca383ef3bf3
+  specs:
+    mongoid_gridfs_plug (0.0.1)
+      mime-types
+      mongoid
+
+GIT
   remote: https://github.com/rubysherpas/paranoia.git
   revision: d70c4c5a7098d4c8416332489e3f63b0a959ab97
   branch: rails5
@@ -49,7 +57,6 @@ GEM
     arel (7.1.4)
     autoprefixer-rails (9.5.0)
       execjs
-    bcrypt (3.1.12)
     bcrypt (3.1.12-x64-mingw32)
     bindex (0.5.0)
     bootstrap-sass (3.3.7)
@@ -57,7 +64,6 @@ GEM
       sass (>= 3.3.4)
     bson (4.4.2)
     builder (3.2.3)
-    byebug (11.0.0)
     climate_control (0.2.0)
     cocaine (0.5.8)
       climate_control (>= 0.0.3, < 1.0)
@@ -114,7 +120,6 @@ GEM
     execjs (2.7.0)
     faraday (0.15.4)
       multipart-post (>= 1.2, < 3)
-    ffi (1.10.0)
     ffi (1.10.0-x64-mingw32)
     font-awesome-sass (5.6.1)
       sassc (>= 1.11)
@@ -141,19 +146,18 @@ GEM
       mime-types-data (~> 3.2015)
     mime-types-data (3.2018.0812)
     mimemagic (0.3.3)
-    mini_magick (4.9.3)
     mini_mime (1.0.1)
     mini_portile2 (2.4.0)
     minitest (5.11.3)
     mongo (2.7.1)
       bson (>= 4.4.2, < 5.0.0)
+    mongoid (6.1.1)
+      activemodel (~> 5.0)
+      mongo (>= 2.4.1, < 3.0.0)
     multi_json (1.13.1)
     multipart-post (2.0.0)
-    mysql2 (0.5.2)
     mysql2 (0.5.2-x64-mingw32)
     nio4r (2.3.1)
-    nokogiri (1.10.1)
-      mini_portile2 (~> 2.4.0)
     nokogiri (1.10.1-x64-mingw32)
       mini_portile2 (~> 2.4.0)
     options (2.3.2)
@@ -168,7 +172,7 @@ GEM
     progress_bar (1.3.0)
       highline (>= 1.6, < 3)
       options (~> 2.3.0)
-    puma (3.12.0)
+    puma (3.12.1)
     rack (2.0.6)
     rack-protection (2.0.5)
       rack
@@ -265,7 +269,6 @@ GEM
     websocket-extensions (0.1.3)
 
 PLATFORMS
-  ruby
   x64-mingw32
 
 DEPENDENCIES
@@ -279,8 +282,9 @@ DEPENDENCIES
   hiredis
   jbuilder (~> 2.5)
   jquery-rails
-  mini_magick
   mongo
+  mongoid
+  mongoid_gridfs_plug!
   mysql2
   paperclip (~> 5.0.0)
   paranoia!
@@ -298,4 +302,4 @@ DEPENDENCIES
   web-console (>= 3.3.0)
 
 BUNDLED WITH
-   1.16.6
+   1.16.2
