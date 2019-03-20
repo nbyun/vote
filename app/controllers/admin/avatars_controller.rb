@@ -6,9 +6,13 @@ class Admin::AvatarsController < Admin::AdminBaseController
 
   def create
     file = params[:avatar]
-    res = UploadPictureService.new(file).call
-    puts res
-
+    #res = UploadPictureService.new(file).call
+    file_name, tmp = file[:filename].to_s, file[:tmp]
+    avatar = Avatar.new
+    avatar.nm = file_name
+    avatar.file = tmp
+    avatar.save!
+    puts avatar.id.to_s
   end
 
 
