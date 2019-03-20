@@ -4,5 +4,5 @@ class Avatar
   store_in collection: 'images', database: 'vote'
   
   field :nm, type: String
-  attachment :image
+  attachment :file
 end
