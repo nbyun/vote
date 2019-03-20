@@ -1,0 +1,3 @@
+class Avatar
+  
+end

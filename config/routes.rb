@@ -2,9 +2,10 @@ Rails.application.routes.draw do
   namespace :admin do
     root to: 'home#index'
     get 'home/index'
-
+    get '/upload/*path' => "gridfs#serve"
     resources :players
     resources :tickets
+    resources :avatars, only: [:new, :create]
   end
 
   root to: 'vote#index'
