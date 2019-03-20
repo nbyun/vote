@@ -10,7 +10,7 @@ class Admin::AvatarsController < Admin::AdminBaseController
     file_name, tmp = file[:filename].to_s, file[:tmp]
     avatar = Avatar.new
     avatar.nm = file_name
-    avatar.file = tmp
+    avatar.image = tmp
     avatar.save!
     puts avatar.id.to_s
   end
